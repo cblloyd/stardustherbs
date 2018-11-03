@@ -1,0 +1,137 @@
+body{
+    background-color: bisque;
+    font-family: 'Hind', sans-serif;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "title"
+    "header"
+    "content"
+    "order"  
+    "contact"
+    "footer"
+    ;
+}
+
+.title{
+    grid-area: "title";
+    display: flex;
+    justify-content: center;
+}
+
+.header{
+    grid-area: "header";
+}
+
+.header > nav > ul {
+    background-color:#3f1d26;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 60px;
+    align-items: center;
+    margin-left:-30px;
+
+}
+
+.header > nav > ul > li > a{
+    color:bisque;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+.content{
+    grid-area: "content";
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.productImage{
+    display: flex;
+    justify-content: center;
+}
+
+.productImage img{
+ max-width: 300px;
+ max-height: 300px;
+}
+
+.productList{
+    text-align: center;
+}
+
+.productList > ul{
+    list-style: none;
+    margin-left: -20px;
+}
+
+.order{
+    grid-area: "order";
+    background-color:#3f1d26;
+    color:bisque;
+}
+
+.order > h1{
+    text-align: center;
+}
+
+.order > p{
+    padding: 0px 20px;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact h1{
+    text-align: center;
+}
+
+.fa{
+    color:#3f1d26;
+}
+
+
+@media only screen and (min-width : 768px){
+   body{
+  
+   } 
+
+   .title{
+       grid-column-start: 1;
+       grid-column-end: 3;
+   }
+
+   .header{
+        grid-column-start: 1;
+        grid-column-end: 3;
+   }
+
+   .contact{
+        grid-column-start: 1;
+        grid-column-end: 3;
+   }
+
+   .order{
+       background-color: bisque;
+       color:#3f1d26;
+   }
+
+   .footer{
+    grid-column-start: 1;
+    grid-column-end: 3;
+   }
+
+
+   .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
